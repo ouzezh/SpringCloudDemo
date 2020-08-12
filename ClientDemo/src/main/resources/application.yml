@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: myClient
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+feign:
+  hystrix:
+    enabled: true
+
+ribbon:
+  # Max number of retries on the same server (excluding the first try)
+  MaxAutoRetries: 1
+  # Max number of next servers to retry (excluding the first server)
+  MaxAutoRetriesNextServer: 1
+  # 对所有的操作请求都进行重试，如果是get则可以，如果是post,put等操作没有实现幂等的情况下是很危险的
+#  OkToRetryOnAllOperations: true
+  # Connect timeout used by Apache HttpClient
+  ConnectTimeout: 1000
+  # Read timeout used by Apache HttpClient
+  ReadTimeout: 1000
+myProvider:
+  ribbon:
+    # 负载均衡策略(经测试设置在default中无效)
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule
+
+# https://github.com/Netflix/Hystrix/wiki/Configuration
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            # 命令执行超时时间，默认1000ms(超过ribbon超时配置ribbon才会重试)
+            timeoutInMilliseconds: 1000
+      circuitBreaker:
+        # 一个时间窗口(默认10000ms)开启 circuit break 的错误请求阀值(默认20)
+        requestVolumeThreshold: 20
+        # circuit break 开启时间(默认5000ms)
+        sleepWindowInMilliseconds: 5000
