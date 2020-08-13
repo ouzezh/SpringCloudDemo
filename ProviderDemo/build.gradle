@@ -8,13 +8,6 @@ group = 'com.ozz.springcloud'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
-repositories {
-	mavenLocal()
-	maven { url "http://nexus.staff.xdf.cn/repository/public" }
-	maven { url "http://maven.aliyun.com/nexus/content/groups/public" }
-	mavenCentral()
-	jcenter()
-}
 
 ext {
 	set('springCloudVersion', "Hoxton.SR7")
