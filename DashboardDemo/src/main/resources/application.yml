@@ -4,3 +4,17 @@ server:
 hystrix:
   dashboard:
     proxyStreamAllowList: localhost # 配置允许监控的目标host
+
+spring:
+  application:
+    name: myDashboardTurbine
+# 注册到服务中心(turbine聚合数据)
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+turbine:
+  appConfig: myClient
+  aggregator:
+    clusterConfig: default
+  clusterNameExpression: new String("default")
