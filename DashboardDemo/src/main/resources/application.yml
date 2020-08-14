@@ -1,0 +1,6 @@
+server:
+  port: 8088
+
+hystrix:
+  dashboard:
+    proxyStreamAllowList: localhost # 配置允许监控的目标host

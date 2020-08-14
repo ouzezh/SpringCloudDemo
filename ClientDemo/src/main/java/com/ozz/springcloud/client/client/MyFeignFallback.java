@@ -6,6 +6,6 @@ import org.springframework.stereotype.Component;
 public class MyFeignFallback implements MyFeignClient {
 	@Override
 	public String hello(String name) {
-		return "fallback hello";
+		return "fallback " + name;
 	}
 }
