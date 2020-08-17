@@ -1,7 +1,0 @@
-repositories {
-	mavenLocal()
-	maven { url "http://nexus.staff.xdf.cn/repository/public" }
-	maven { url "http://maven.aliyun.com/nexus/content/groups/public" }
-	mavenCentral()
-	jcenter()
-}
