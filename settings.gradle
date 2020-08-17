@@ -1,2 +1,3 @@
 rootProject.name = 'SpringCloudDemo'
 include 'ServerDemo','ProviderDemo','ClientDemo','DashboardDemo','GatewayDemo'
+include 'FeignDemo'
