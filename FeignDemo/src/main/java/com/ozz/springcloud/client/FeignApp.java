@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
-@EnableFeignClients // 集成Feign(默认集成Ribbon,在配置文件中开启Hystrix)
+@EnableFeignClients
 public class FeignApp {
 
   public static void main(String[] args) {
