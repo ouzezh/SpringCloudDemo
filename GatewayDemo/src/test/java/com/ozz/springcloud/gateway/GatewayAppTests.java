@@ -1,10 +1,10 @@
-package com.ozz.springcloud.client;
+package com.ozz.springcloud.gateway;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ClientDemoApplicationTests {
+class GatewayAppTests {
 
 	@Test
 	void contextLoads() {

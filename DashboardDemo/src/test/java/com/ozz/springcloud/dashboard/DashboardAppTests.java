@@ -1,10 +1,10 @@
-package com.ozz.springcloud.gateway;
+package com.ozz.springcloud.dashboard;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class GatewayDemoApplicationTests {
+class DashboardAppTests {
 
 	@Test
 	void contextLoads() {
