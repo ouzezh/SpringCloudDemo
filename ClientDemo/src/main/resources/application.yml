@@ -28,7 +28,16 @@ myProvider:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule
 
 # https://github.com/Netflix/Hystrix/wiki/Configuration
+# https://blog.csdn.net/tongtong_use/article/details/78611225
 hystrix:
+  threadpool:
+    default:
+      # 核心线程数
+      coreSize: 10
+      # 最大队列长度
+      maxQueueSize: -1
+      #此属性设置队列大小拒绝阈值 - 即使未达到maxQueueSize也将发生拒绝的人为最大队列大小。 此属性存在，因为BlockingQueue的maxQueueSize不能动态更改，我们希望允许您动态更改影响拒绝的队列大小。
+      queueSizeRejectionThreshold: 5
   command:
     default:
       execution:
@@ -39,5 +48,7 @@ hystrix:
       circuitBreaker:
         # 一个时间窗口(默认10000ms)开启 circuit break 的错误请求阀值(默认20)
         requestVolumeThreshold: 20
+        # 出错百分比阀值（默认50%）
+        errorThresholdPercentage: 50
         # circuit break 开启时间(默认5000ms)
         sleepWindowInMilliseconds: 5000

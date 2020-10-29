@@ -2,13 +2,15 @@
 ServerDemo
 
 ## Feign
-ClientDemo
+FeignDemo & ClientDemo
 
 ## Ribbon
 ClientDemo
 
 ## Hystrix
 ClientDemo
+
+[Hytrix配置](https://blog.csdn.net/tongtong_use/article/details/78611225)
 
 ## Hystrix Dashboard
 DashboardDemo
@@ -17,8 +19,9 @@ http://localhost:8088/hystrix
 
 单节点stream地址: http://localhost:8080/actuator/hystrix.stream
 聚合stream地址:  http://localhost:8080/hystrix.stream
-
 ```
+[仪表盘说明](https://blog.csdn.net/tongtong_use/article/details/78611225)
+
 ## Zuul
 GatewayDemo
 ```
