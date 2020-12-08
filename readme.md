@@ -32,6 +32,8 @@ http://localhost/myService/hello/test
 
 [Spring Cloud Config](https://spring.io/projects/spring-cloud-config)
 
+[Nacos：配置管理、服务发现](https://nacos.io/zh-cn/docs/what-is-nacos.html)
+
 [Apollo](https://github.com/ctripcorp/apollo/wiki)
 
 [Zuul基于Apollo动态路由](https://www.cnblogs.com/babycomeon/p/11489632.html)
