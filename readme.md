@@ -1,4 +1,7 @@
+[TOC]
+
 ## Eureka
+
 ServerDemo
 
 ## Feign
@@ -28,7 +31,7 @@ GatewayDemo
 http://localhost/myService/hello/test
 ```
 
-## 配置中心
+## Config Center
 
 [Spring Cloud Config](https://spring.io/projects/spring-cloud-config)
 
@@ -37,3 +40,31 @@ http://localhost/myService/hello/test
 [Apollo](https://github.com/ctripcorp/apollo/wiki)
 
 [Zuul基于Apollo动态路由](https://www.cnblogs.com/babycomeon/p/11489632.html)
+
+
+
+### Apollo Client Quick Config
+
+
+
+引入依赖
+
+```
+implementation 'com.ctrip.framework.apollo:apollo-client:1.8.0'
+```
+
+添加 Spring Boot 配置文件 application.yml
+
+```yaml
+app:
+  id: payroll                            #应用ID
+apollo:
+  cacheDir: /xx/config                       #配置本地配置缓存目录
+  cluster: default                           #指定使用哪个集群的配置
+  meta: http://dev-apollo.xx.cn            #配置中心地址
+  autoUpdateInjectedSpringProperties: true   #是否开启 Spring 参数自动更新
+  bootstrap:
+    enabled: true                            #是否开启 Apollo
+    namespaces: ns1,ns2         #设置 Namespace
+```
+
