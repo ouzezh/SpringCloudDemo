@@ -45,7 +45,7 @@ http://localhost/myService/hello/test
 
 ### Apollo Client Quick Config
 
-
+[Apollo GitHub](https://github.com/ctripcorp/apollo/wiki)
 
 引入依赖
 
@@ -68,3 +68,4 @@ apollo:
     namespaces: ns1,ns2         #设置 Namespace
 ```
 
+[Apollo 配置动态更新](https://ctripcorp.github.io/apollo/#/zh/usage/java-sdk-user-guide?id=_3223-configurationproperties%e4%bd%bf%e7%94%a8%e6%96%b9%e5%bc%8f)
