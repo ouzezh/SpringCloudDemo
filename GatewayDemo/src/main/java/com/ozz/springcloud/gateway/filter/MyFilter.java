@@ -1,6 +1,6 @@
 package com.ozz.springcloud.gateway.filter;
 
-import com.google.common.base.Strings;
+import cn.hutool.core.util.StrUtil;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import javax.servlet.http.HttpServletRequest;
@@ -43,7 +43,7 @@ public class MyFilter extends ZuulFilter {
     RequestContext currentContext = RequestContext.getCurrentContext();
     HttpServletRequest request = currentContext.getRequest();
     String token = request.getHeader("token");
-    if (Strings.isNullOrEmpty(token)) {
+    if (StrUtil.isEmpty(token)) {
       currentContext.setSendZuulResponse(false);
       currentContext.setResponseBody("token in header is null");
       currentContext.setResponseStatusCode(401);
