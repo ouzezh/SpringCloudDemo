@@ -1,9 +1,11 @@
 package com.ozz.springcloud.provider.controller;
 
-import javax.servlet.http.HttpServletRequest;
+import cn.hutool.log.StaticLog;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.servlet.http.HttpServletRequest;
 
 @RestController
 public class ProviderController {
@@ -14,7 +16,7 @@ public class ProviderController {
       Thread.sleep(Long.valueOf(name));
     }
     String res = "Hello, " + name + ", This is a greeting from " + request.getRequestURL();
-    System.out.println(res);
+    StaticLog.info(res);
     return res;
   }
 
