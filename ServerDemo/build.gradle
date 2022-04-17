@@ -22,7 +22,7 @@ dependencies {
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-server'
 
-	implementation 'cn.hutool:hutool-all:5.8.0.M2'// Hutool是一个小而全的Java工具类库
+	implementation 'cn.hutool:hutool-all:latest.release'// Hutool是一个小而全的Java工具类库
 
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
